@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Layout</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style2.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="navbar">
+      <!-- Navbar Title -->
+      <h1 class="navbar-title">• Portfolio</h1>
+
+      <!-- Navigation Links -->
+      <nav class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Projects</a>
+        <a href="#">Contact</a>
+        <button class="cta-button">Portfolio</button>
+      </nav>
+
+      <!-- 3 Dots Section -->
+      <div class="navbar-icons">
+        <label class="theme-switch">
+          <input type="checkbox" id="darkModeToggle" />
+          <span class="slider">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+          </span>
+        </label>
+      </div>
+
+      <!-- Hamburger Menu Icon -->
+      <div class="menu-icon">
+        <i class="fas fa-bars"></i>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="mobile-menu">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Projects</a>
+        <a href="#">Contact</a>
+      </div>
+    </header>
+    <!-- Main Content -->
+    <div class="main-container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <h2>About</h2>
+        <p>Job Title</p>
+        <ul class="icon-list">
+          <li class="icon-item">
+            <div class="icon-circle">
+              <div class="icon">📧</div>
+            </div>
+            <span>Email</span>
+          </li>
+          <li class="icon-item">
+            <div class="icon-circle">
+              <div class="icon">📄</div>
+            </div>
+            <span>Resume</span>
+          </li>
+          <li class="icon-item">
+            <div class="icon-circle">
+              <div class="icon">📞</div>
+            </div>
+            <span>Contact</span>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="content">
+        <section class="about">
+          <h2>About</h2>
+          <div class="profile">
+            <img
+              src="https://via.placeholder.com/150"
+              alt="Profile Picture"
+              class="profile-image"
+            />
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel
+              sapien vel erat varius aliquet at vel orci.
+            </p>
+          </div>
+        </section>
+
+        <section class="projects">
+          <h2>Projects</h2>
+          <div class="project-grid">
+            <div class="project-item">
+              <img src="https://via.placeholder.com/200x150" alt="Project 1" />
+              <h3>Project 1</h3>
+            </div>
+            <div class="project-item">
+              <img src="https://via.placeholder.com/200x150" alt="Project 2" />
+              <h3>Project 2</h3>
+            </div>
+            <div class="project-item">
+              <img src="https://via.placeholder.com/200x150" alt="Project 3" />
+              <h3>Project 3</h3>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2024 Portfolio</p>
+        <div class="social-links">
+          <a href="#">Facebook</a>
+          <a href="#">Twitter</a>
+          <a href="#">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document
+        .querySelector(".menu-icon")
+        .addEventListener("click", function () {
+          document.querySelector(".mobile-menu").classList.toggle("show");
+        });
+
+      const darkModeToggle = document.querySelector("#darkModeToggle");
+      darkModeToggle.addEventListener("change", function () {
+        document.body.classList.toggle("dark-mode");
+      });
+    </script>
+  </body>
+</html>

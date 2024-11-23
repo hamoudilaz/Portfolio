@@ -1,0 +1,652 @@
+/* Reset and General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e9f4ff; /* Light gray background for the page */
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Global Dark Mode */
+body.dark-mode {
+  background-color: #121212; /* Dark background */
+  color: #f5f5f5; /* Light text */
+}
+
+/* Navbar in Dark Mode */
+body.dark-mode .navbar {
+  background-color: #1e1e1e;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Darker shadow */
+}
+
+body.dark-mode .navbar-title {
+  color: #f5f5f5; /* Light title text */
+}
+
+body.dark-mode .nav-links a {
+  color: #f5f5f5; /* Light links */
+}
+
+body.dark-mode .nav-links a:hover {
+  background-color: #333; /* Dark hover background */
+  color: #4aa3f0; /* Accent hover text color */
+}
+
+/* Buttons */
+body.dark-mode .cta-button {
+  background-color: #333; /* Dark button background */
+  color: #f5f5f5; /* Light button text */
+}
+
+body.dark-mode .cta-button:hover {
+  background-color: #555; /* Slightly lighter hover */
+}
+
+/* Main Container */
+body.dark-mode .main-container {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+}
+
+/* Sidebar in Dark Mode */
+body.dark-mode .sidebar {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+  border: 1px solid #333; /* Border for contrast */
+}
+
+body.dark-mode .sidebar h2 {
+  color: #4aa3f0; /* Accent color for headings */
+}
+
+/* Content in Dark Mode */
+body.dark-mode .content {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .content h2 {
+  color: #4aa3f0; /* Accent headings */
+}
+
+/* Footer */
+body.dark-mode .footer {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+}
+
+body.dark-mode .footer .social-links a {
+  color: #4aa3f0;
+}
+
+body.dark-mode .footer .social-links a:hover {
+  color: #007acc;
+}
+
+/* Links */
+body.dark-mode a {
+  color: #4aa3f0;
+}
+
+body.dark-mode a:hover {
+  color: #007acc;
+}
+
+/* Tables */
+body.dark-mode table {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+}
+
+body.dark-mode table th,
+body.dark-mode table td {
+  border: 1px solid #333;
+}
+
+/* Toggle Switch in Dark Mode */
+body.dark-mode .theme-switch .slider {
+  background: #555; /* Darker toggle background */
+}
+
+body.dark-mode .theme-switch .slider:before {
+  background: #f5f5f5; /* Light toggle button */
+}
+
+/* Mobile Menu in Dark Mode */
+body.dark-mode .mobile-menu {
+  background-color: #1e1e1e;
+  color: #f5f5f5;
+}
+
+body.dark-mode .mobile-menu a {
+  color: #f5f5f5;
+}
+
+body.dark-mode .mobile-menu a:hover {
+  color: #007acc;
+}
+
+/* Navbar Styling */
+.navbar {
+  position: relative; /* Ensure it serves as a reference for absolute positioning */
+  width: 100%; /* Make the navbar span the full width */
+  background-color: #e9f4ff; /* Match your desired background color */
+  display: flex; /* Flexbox for alignment */
+  justify-content: space-between; /* Space between title, links, and icons */
+  align-items: center; /* Center align the items vertically */
+  padding: 1rem 2rem; /* Adjust padding as needed */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for a floating effect */
+  z-index: 99; /* Ensure it stays above other content */
+  gap: 10px;
+}
+.navbar-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: bold;
+  color: #333;
+  font-family: "Trebuchet MS", sans-serif;
+  white-space: nowrap;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+
+  margin: 0 auto;
+}
+
+.nav-links a {
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
+  color: #333;
+  padding: clamp(0.5rem, 1vw, 1rem) clamp(1rem, 2vw, 2rem);
+  text-decoration: none;
+  border-radius: 10px;
+  white-space: nowrap;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: #007acc; /* Blue background on hover */
+  color: white; /* White text on hover */
+  border-radius: 10px; /* Maintain smooth rounded corners */
+}
+/* CTA Button */
+.cta-button {
+  background-color: #5ab7ea; /* Light blue button background */
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px; /* Rounded button */
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  font-family: "Verdana", sans-serif;
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    border-radius 0.3s ease;
+}
+.cta-button:hover {
+  background-color: #007acc; /* Darker blue on hover */
+  transform: scale(1.05); /* Slight scaling on hover */
+}
+
+/* 3 Dots Section */
+
+.icon {
+  width: 10px;
+  height: 10px;
+  background-color: #d9d9d9; /* Gray dot color */
+  border-radius: 50%; /* Makes the dots circular */
+  display: inline-block;
+}
+.navbar-icons {
+  display: flex; /* Flexbox for alignment */
+  align-items: center;
+  gap: 0.5rem; /* Spacing between the dots */
+  flex-shrink: 0; /* Prevent the icons from shrinking */
+  margin-left: auto; /* Push the icons to the far-right */
+}
+
+/* Main Container */
+/* Default Desktop Styles */
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr; /* Sidebar and content layout */
+  gap: 2rem; /* Spacing between columns */
+  padding: 2rem; /* Ample padding for desktop screens */
+  box-sizing: border-box; /* Include padding and borders in width */
+}
+
+/* Mobile-Specific Styles */
+@media (max-width: 576px) {
+  .main-container {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    padding: 0.5rem; /* Reduce padding for mobile */
+    font-size: 0.9rem; /* Adjust text size for better readability */
+
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+
+  .main-container > * {
+    max-width: 100%; /* Ensure children fit within the container */
+  }
+}
+
+/* Sidebar */
+.sidebar {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.sidebar h2 {
+  font-size: 1.8rem;
+  color: #007acc;
+  margin-bottom: 1.5rem;
+}
+
+.icon-list {
+  list-style: none;
+  margin-top: 1.5rem;
+}
+
+.icon-item {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.icon-circle {
+  width: 50px;
+  height: 50px;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-circle .icon {
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.icon-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.icon-subtitle {
+  color: #666;
+  font-size: 1rem;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about h2,
+.projects h2 {
+  font-size: 2rem;
+  color: #007acc;
+  margin-bottom: 1rem;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.profile-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.projects .project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.project-item {
+  text-align: center;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.project-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Footer */
+.footer {
+  margin-top: 2rem;
+  background-color: #333;
+  color: white;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+.footer .social-links a {
+  text-decoration: none;
+  color: white;
+  margin: 0 0.5rem;
+  font-size: 1rem;
+}
+
+.footer .social-links a:hover {
+  text-decoration: underline;
+}
+
+/* Hide the Checkbox */
+.toggle-input {
+  display: none; /* Hide the input element */
+}
+
+/* Toggle Label */
+.toggle-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80px; /* Width of the toggle switch */
+  height: 40px; /* Height of the toggle switch */
+  background-color: #ccc; /* Default background color */
+  border-radius: 50px; /* Rounded edges */
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding: 0 5px; /* Space for the icons */
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Toggle Circle */
+.toggle-circle {
+  width: 30px; /* Circle size */
+  height: 30px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 5px; /* Default position */
+  transform: translateY(-50%);
+  transition: left 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Icons */
+.icon-dark,
+.icon-light {
+  font-size: 1.5rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Icon (🌙) - Left */
+.icon-dark {
+  left: 10px; /* Position on the left */
+  color: #2980b9; /* Blue for dark mode */
+  opacity: 1; /* Visible by default */
+}
+
+/* Light Icon (☀️) - Right */
+.icon-light {
+  right: 10px; /* Position on the right */
+  color: #f39c12; /* Yellow for light mode */
+  opacity: 0; /* Hidden by default */
+}
+
+/* Checked State */
+.toggle-input:checked + .toggle-label {
+  background-color: #007acc; /* Active background color */
+}
+
+.toggle-input:checked + .toggle-label .toggle-circle {
+  left: calc(100% - 35px); /* Move circle to the right */
+}
+
+.toggle-input:checked + .toggle-label .icon-dark {
+  opacity: 0; /* Hide dark icon */
+}
+
+.toggle-input:checked + .toggle-label .icon-light {
+  opacity: 1; /* Show light icon */
+}
+
+/* Toggle Switch Container */
+.theme-switch {
+  position: relative;
+  width: 80px;
+  height: 40px;
+  margin: 0 15px;
+  flex-shrink: 0; /* Prevent the toggle from shrinking */
+  margin-left: auto; /* Push the toggle to the right */
+}
+
+/* Hide default checkbox */
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Toggle Switch Slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #e0e0e0;
+  border-radius: 34px;
+  transition: 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+  box-shadow: 0px 0px 3px #000000, 0px 0px 0px #000000;
+}
+
+/* The sliding circle */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 34px;
+  width: 34px;
+  left: 3px;
+  bottom: 3px;
+  background: #6d6d6d;
+  border-radius: 50%;
+  transition: 0.4s;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Icons inside toggle */
+.slider .fa-sun,
+.slider .fa-moon {
+  font-size: 18px;
+  z-index: 1;
+  transition: opacity 0.2s ease;
+}
+
+.slider .fa-sun {
+  color: #6e6e6e;
+  opacity: 1;
+}
+
+.slider .fa-moon {
+  color: #7e7e7e;
+  opacity: 0;
+}
+
+/* Checked States */
+input:checked + .slider {
+  background: linear-gradient(145deg, #23272f, #181a1f);
+}
+
+input:checked + .slider:before {
+  transform: translateX(40px);
+  background: linear-gradient(145deg, #f0f0f0, #ffffff);
+}
+
+input:checked + .slider .fa-moon {
+  opacity: 1;
+  color: #ffffff;
+}
+
+input:checked + .slider .fa-sun {
+  opacity: 0;
+}
+
+@media (max-width: 992px) {
+  .navbar {
+    justify-content: center;
+
+    padding: 1.5rem;
+  }
+
+  .navbar-title {
+    display: none; /* Hide the title */
+  }
+
+  .nav-links {
+    margin: 0;
+    justify-content: center;
+  }
+
+  .theme-switch {
+    width: 75px;
+    height: 37px;
+  }
+
+  .slider:before {
+    height: 31px;
+    width: 31px;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(38px);
+  }
+}
+
+/* Hamburger button */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+}
+
+.hamburger span {
+  width: 100%;
+  height: 3px;
+  background: #696969;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+}
+
+.menu-items {
+  display: flex;
+  align-items: center;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.fas {
+  color: rgb(80, 80, 80);
+}
+/* Mobile Menu */
+.mobile-menu {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  align-items: center;
+  background-color: #e9f4ff; /* Match navbar background */
+  position: absolute; /* Ensure it's positioned relative to the header */
+  top: 100%; /* Position it directly below the header */
+  left: 0;
+  width: 100%; /* Full width of the header */
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow for separation */
+  z-index: 100; /* Ensure it appears above other content */
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #333;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+  width: 100%; /* Make links span full width */
+  text-align: center; /* Center-align the text */
+}
+
+.mobile-menu a:hover {
+  color: #007acc;
+}
+
+.mobile-menu.show {
+  display: flex; /* Show the menu when toggled */
+}
+
+/* Adjust hamburger menu visibility for small screens */
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .menu-icon {
+    display: block; /* Show hamburger icon on smaller screens */
+  }
+
+  .nav-links {
+    display: none; /* Hide regular nav links on small screens */
+  }
+}
+
+.dark-mode {
+  background-color: #333;
+  color: white;
+}
